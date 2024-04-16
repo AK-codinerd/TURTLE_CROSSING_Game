@@ -19,7 +19,7 @@ car_manager = CarManager()
 
 # controlling player
 screen.listen()
-screen.onkey(player.move, "Up")
+screen.onkey(player.move, "space")
 
 # in loop
 game_is_on = True
@@ -27,7 +27,7 @@ while game_is_on:
     time.sleep(slp)
     screen.update()
 
-    if num % 6 == 0:
+    if num % 10 == 0:
         car_manager.create_car()
     car_manager.move_cars()
 
